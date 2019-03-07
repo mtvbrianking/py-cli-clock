@@ -1,0 +1,14 @@
+# This file specifies the dependencies that are needed by this project and
+# that would also be needed by another project that depends on this project.
+#
+# Specifically, this file is fed into `install_requires` in `setup.py`.
+# This file should contain ranges of requirements, not pinned versions.
+#
+# It should contain only direct dependencies, not transitive dependencies.
+# When you update this file run;
+#
+#     `pip-compile requirements.in -o requiremts.txt`
+#
+# to automatically update `requirements.txt`.
+
+argparse>=1.2

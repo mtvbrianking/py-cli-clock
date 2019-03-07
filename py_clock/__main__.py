@@ -1,12 +1,9 @@
-import sys
+import argparse
 
 def main():
 
-    args = sys.argv[1:]
-    print('count of args :: {}'.format(len(args)))
-
-    for arg in args:
-        print('passed argument :: {}'.format(arg))
+    parser = argparse.ArgumentParser(description="Simple CLI digital clock.")
+    args = parser.parse_args()
 
 if __name__ == '__main__':
     main()
