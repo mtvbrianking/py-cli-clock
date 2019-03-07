@@ -10,7 +10,11 @@ Welcome to Py CLI Clock's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+Py Clock
+========================================
 
+.. automodule:: py_clock.__main__
+   :members:
 
 Indices and tables
 ==================
