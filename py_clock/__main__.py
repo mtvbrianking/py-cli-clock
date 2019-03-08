@@ -5,8 +5,23 @@ Entry file for py_clock package
 """
 
 from time import localtime, sleep, strftime
-from sys import stdout
+from signal import SIGINT, signal
+from sys import exit, stdout
 import argparse
+
+
+def signal_handler(signer, frame):
+    """
+    Handle keyboard interruptes
+    Source: stackoverflow.com/a/32923070
+
+    :param signer:
+    :param frame:
+
+    :return:
+    """
+    print("\n\nExisting...")
+    exit()
 
 
 def main():
@@ -15,6 +30,9 @@ def main():
 
     :return:
     """
+
+    # Listen and broadcast to signal interruption
+    signal(SIGINT, signal_handler)
 
     # -----------------------------------------
     # Setup command meta
