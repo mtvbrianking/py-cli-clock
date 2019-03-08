@@ -1,0 +1,6 @@
+# Extend production requirements
+-r production.txt
+
+# Dev dependencies
+Sphinx==1.8.4
+pytest==4.3.0
