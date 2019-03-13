@@ -12,6 +12,8 @@ Py CLI Clock
 
 `py_clock`
 
+![Py CLI Clock Demo](https://github.com/mtvbrianking/py-cli-clock/blob/master/py_clock.gif)
+
 **Testing**
 
 `pytest -v`
