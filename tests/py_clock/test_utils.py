@@ -3,14 +3,12 @@ from py_clock.utils import get_file_contents
 
 CONTENT = u"Sample read me file."
 
-def test_get_file_contents(tmp_path):
-    # Create temp file
-    sub_dir = tmp_path / "py_clock"
-    sub_dir.mkdir()
-    tmp_file = sub_dir / "README.md"
-    tmp_file.write_text(CONTENT)
-    assert tmp_file.read_text() == CONTENT
-    assert len(list(tmp_path.iterdir())) == 1
-
+def test_get_file_contents(tmpdir):
+    tmp_file = tmpdir.mkdir("py_clock").join("README.md")
+    tmp_file.write(CONTENT)
+    # Assert content written
+    assert tmp_file.read() == CONTENT
+    # Assert dir has exactly 1 file
+    assert len(tmpdir.listdir()) == 1
     # Assert util func can read file
     assert get_file_contents(tmp_file) == CONTENT
