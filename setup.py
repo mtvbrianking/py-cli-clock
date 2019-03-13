@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
 
-import os
 from setuptools import setup
+from py_clock.utils import get_file_contents
+from os import path
 
-# Utility function to read the README file.
-def read(fname):
-    return open(os.path.join(os.path.dirname(__file__), fname)).read()
+readme = path.abspath(path.join(path.dirname(__file__), "README.md"))
 
 setup(
     name = 'py-cli-clock',
@@ -13,8 +12,8 @@ setup(
     author = "Brian Matovu",
     author_email = "mtvbrianking@gmail.com",
     description = ("This is a demo project trying to learn Python basics; "
-        "Project structure, documentation, automated tests, continous integration."),
-    long_description = read('README.md'),
+        "Project structure, documentation, automated tests, continuous integration."),
+    long_description = get_file_contents(readme),
     license = "MIT",
     packages = ['py_clock'],
     keywords = "Python CLI Clock",
