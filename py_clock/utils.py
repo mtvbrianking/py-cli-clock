@@ -8,8 +8,3 @@ def get_file_contents(file):
     :return: File contents
     """
     return open(file).read()
-
-
-# import os.path as path
-
-# two_up =  path.abspath(path.join(__file__ ,"../.."))
