@@ -1,1 +1,1 @@
-pip3 install -r requirements/production.txt -e .
+pip install -r requirements/production.txt -e .
